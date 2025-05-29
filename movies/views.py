@@ -1,12 +1,13 @@
+from django.shortcuts import render
+
+def movie_list(request):
+    return render(request, 'movies/movie_list.html')
 from django.http import HttpResponse
 
 def index(request):
-    # return HttpResponse("Hello, world. You're at the polls index.")
-# from django.shortcuts import render
-# # Create your views here.
 
     html = """
-<html>
+    <html>
     <head>
         <title>🎬 영화 추천</title>
         <style>
@@ -43,6 +44,5 @@ def index(request):
         </div>
     </body>
     </html>
-
-"""
+    """
     return HttpResponse(html)
